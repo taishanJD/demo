@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.spring.mvc.dao.MoneyMapper2">
+    <resultMap id="BaseResultMap" type="com.example.spring.mvc.model.Money">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="money" jdbcType="BIGINT" property="money" />
+    </resultMap>
+
+    <update id="increseMoney">
+         update money
+         set money=money + #{money}
+         where id=#{userId}
+    </update>
+</mapper>
