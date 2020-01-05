@@ -9,12 +9,19 @@ public class Node {
     public int data;
     public Node leftChild;
     public Node rightChild;
+    public Node parent; //2020-1-5 为了NextNodeInLDR一题加的
 
     public Node(int data) {
         this.data = data;
     }
 
-    //写死一个树用来测试
+    /**
+     * * 测试例子：（n指null）
+     *  *              8
+     *  *          3       10
+     *  *      1     6    n   14
+     *  *   n   n  4  7 n  n n  13
+     * */
     public static Node bulidTestNode(){
         Node a = new Node(8);
         Node b = new Node(3);
@@ -31,9 +38,19 @@ public class Node {
         b. leftChild = d;
         b. rightChild = e;
         c. rightChild = f;
-        e. rightChild = g;
+        e. leftChild = g;
         e. rightChild = h;
-        f. leftChild = i;
+        f. rightChild = i;
+
+        a.parent = null;
+        b.parent = a;
+        c.parent = a;
+        d.parent = b;
+        e.parent = b;
+        f.parent = c;
+        g.parent = e;
+        h.parent = e;
+        i.parent = f;
 
         return a;
     }
