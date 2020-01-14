@@ -1,4 +1,4 @@
-package com.example.algorithm.ready;
+package com.example.algorithm.ready.jedi;
 
 
 import java.util.LinkedList;
