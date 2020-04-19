@@ -3,5 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="money" class="com.example.spring.mvc.model.Money"/>
+    <!--<bean id="money" class="com.example.spring.mvc.model.Money"/>-->
+
+    <!--<bean id="a" class="com.example.spring.core.bean.A" init-method="init"/>-->
+
+    <bean id="b" class="com.example.spring.core.bean.B"/>
+
+
+    <!--<bean id="postProcesser" class="com.example.spring.core.bean.MyPostProcessor"/>-->
 </beans>

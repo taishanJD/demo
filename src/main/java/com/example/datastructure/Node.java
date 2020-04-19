@@ -20,7 +20,7 @@ public class Node {
      *  *              8
      *  *          3       10
      *  *      1     6    n   14
-     *  *   n   n  4  7 n  n n  13
+     *  *   n   n  4  7 n  n n  15
      * */
     public static Node bulidTestNode(){
         Node a = new Node(8);
@@ -31,7 +31,7 @@ public class Node {
         Node f = new Node(14);
         Node g = new Node(4);
         Node h = new Node(7);
-        Node i = new Node(13);
+        Node i = new Node(15);
 
         a. leftChild = b;
         a. rightChild = c;

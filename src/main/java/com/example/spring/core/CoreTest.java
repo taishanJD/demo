@@ -1,8 +1,10 @@
 package com.example.spring.core;
 
+import com.example.spring.mvc.model.Money;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -48,6 +50,12 @@ public class CoreTest {
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         ac.containsBean("money");
         System.out.println(ac);
+
+        //@configration用法
+        ApplicationContext ac1 = new AnnotationConfigApplicationContext(Config.class);
+        Money money = (Money) ac1.getBean("money");
+        System.out.println(money);
+
 
     }
 }
